@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB"><!--English Language -British-->
+<head>
+    <meta charset="utf-8"><!--Allows showing of symbols etc-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--fits any type of device screen-->
+    <meta name="description" content="Answer 10 questions about US presidents and review your quiz results."><!--SEO-->
+    <title>Take the Quiz | USA Presidents - QuizMaster</title><!--Shows on TABs-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/quiz.js" defer></script><!--only listed here as this is where the QUIZ lives-->
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <p class="site-name">QuizMaster</p>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-to.html">How to play</a></li>
+                <li><a href="quiz.html" aria-current="page">Take the quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <h1>US Presidents Quiz</h1>
+
+        <noscript>
+            <p class="notice">This quiz needs JavaScript. Please turn it on and reload the page.</p>
+        </noscript>
+
+        <!-- Question area: filled in by quiz.js -->
+        <section id="quiz-area" aria-labelledby="progress-text">
+            <p id="progress-text" class="progress"></p>
+            <form id="quiz-form" novalidate>
+                <fieldset id="question-box"></fieldset>
+                <button type="submit" id="prev-btn" class="btn" disabled>Previous question</button>
+                <button type="submit" id="next-btn" class="btn" disabled>Next question</button>
+            </form>
+        </section>
+
+        <!-- Results area: shown after the last question -->
+        <section id="results-area" aria-labelledby="results-heading" hidden>
+            <h2 id="results-heading">Your results</h2>
+            <p id="score-text" class="score"></p>
+            <ol id="review-list" class="review"></ol>
+            <button type="button" id="restart-btn" class="btn">Try again with new questions</button>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>QuizMaster, Learning People Project 1 portfolio piece.</p>
+    </footer>
+</body>
+</html>
